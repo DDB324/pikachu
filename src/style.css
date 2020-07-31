@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+input,
+button {
+  font-family: inherit;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  background: #ffe600;
+  min-height: 100vh;
+}
+.skin {
+  position: relative;
+}
+.nose {
+  width: 20px;
+  height: 5px;
+  background: black;
+  border-top-left-radius: 10px 5px;
+  border-top-right-radius: 10px 5px;
+  top: 130px;
+  left: 50%;
+  margin-left: -10px;
+  position: absolute;
+}
+.nose::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-top: 8px solid black;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  top: 5px;
+}
+.eye {
+  width: 64px;
+  height: 64px;
+  border: 4px solid black;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -32px;
+  background: rgb(46, 46, 46);
+  border-radius: 50%;
+}
+.eye::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  border: 3px solid #000;
+  display: block;
+  border-radius: 50%;
+  left: 6px;
+  top: -3px;
+  background: #fff;
+  position: relative;
+}
+.eye.left {
+  transform: translateX(-120px);
+}
+.eye.right {
+  transform: translateX(120px);
+}
+.face {
+  border: 3px solid black;
+  background: red;
+  width: 88px;
+  height: 88px;
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  margin-left: -44px;
+}
+.face.left {
+  transform: translateX(-170px);
+}
+.face.right {
+  transform: translateX(170px);
+}
+.lip {
+  width: 80px;
+  height: 25px;
+  position: absolute;
+  left: 50%;
+  top: 160px;
+  margin-left: -40px;
+  border: 4px solid black;
+  border-top: none;
+  background: #ffe600;
+}
+.lip.left {
+  transform: translateX(-40px) rotate(-25deg);
+  border-bottom-left-radius: 60px 30px;
+  border-right: none;
+}
+.lip.right {
+  transform: translateX(40px) rotate(25deg);
+  border-bottom-right-radius: 60px 30px;
+  border-left: none;
+}
+.down {
+  position: absolute;
+  width: 150px;
+  height: 300px;
+  left: 50%;
+  margin-left: -75px;
+  top: 165px;
+  overflow: hidden;
+  border-radius: 30px 30px 0 0;
+}
+.yuan1 {
+  position: absolute;
+  width: 228px;
+  height: 800px;
+  border: 4px solid black;
+  left: 50%;
+  margin-left: -114px;
+  top: -620px;
+  border-bottom-left-radius: 118px 800px;
+  border-bottom-right-radius: 118px 800px;
+  background: #9b000a;
+  z-index: -1;
+  overflow: hidden;
+}
+.yuan1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 300px;
+  width: 200px;
+  bottom: -150px;
+  border: 1px solid red;
+  border-radius: 50%;
+  background: #ff485f;
+  left: 50%;
+  margin-left: -100px;
+}
